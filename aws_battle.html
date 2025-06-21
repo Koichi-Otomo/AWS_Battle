@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Battle</title>
+    <link rel="stylesheet" href="aws_battle.css">
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <h1>AWS Battle</h1>
+        
+        <div class="game-info">
+            <div class="score">
+                <div class="player-score">プレイヤー: <span id="player-score">5</span></div>
+                <div class="opponent-score">CPU: <span id="opponent-score">5</span></div>
+            </div>
+            <div class="turn-indicator">
+                <span id="current-turn">あなたのターン</span>
+            </div>
+        </div>
+
+        <div class="game-board" id="game-board">
+            <div class="cell" data-row="0" data-col="0"></div>
+            <div class="cell" data-row="0" data-col="1"></div>
+            <div class="cell" data-row="0" data-col="2"></div>
+            <div class="cell" data-row="1" data-col="0"></div>
+            <div class="cell" data-row="1" data-col="1"></div>
+            <div class="cell" data-row="1" data-col="2"></div>
+            <div class="cell" data-row="2" data-col="0"></div>
+            <div class="cell" data-row="2" data-col="1"></div>
+            <div class="cell" data-row="2" data-col="2"></div>
+        </div>
+
+        <div class="player-hand" id="player-hand">
+            <h3>あなたの手札</h3>
+            <div class="hand-cards"></div>
+        </div>
+
+        <button id="new-game-btn" onclick="startNewGame()">新しいゲーム</button>
+    </div>
+    <script src="aws_battle.js"></script>
+</body>
+</html>
