@@ -60,6 +60,57 @@ class AWSBattleGame {
                 name: 'Amazon ElastiCache', 
                 icon: 'Asset-Package_02072025.dee42cd0a6eaacc3da1ad9519579357fb546f803/Architecture-Service-Icons_02072025/Arch_Database/48/Arch_Amazon-ElastiCache_48.png',
                 values: [7, 8, 6, 5] 
+            },
+            // 新しく追加する10種類のAWSサービス
+            { 
+                name: 'Amazon CloudFront', 
+                icon: 'Asset-Package_02072025.dee42cd0a6eaacc3da1ad9519579357fb546f803/Architecture-Service-Icons_02072025/Arch_Networking-Content-Delivery/48/Arch_Amazon-CloudFront_48.png',
+                values: [8, 7, 6, 8] 
+            },
+            { 
+                name: 'Amazon SQS', 
+                icon: 'Asset-Package_02072025.dee42cd0a6eaacc3da1ad9519579357fb546f803/Architecture-Service-Icons_02072025/Arch_Application-Integration/48/Arch_Amazon-Simple-Queue-Service_48.png',
+                values: [6, 9, 7, 6] 
+            },
+            { 
+                name: 'Amazon SNS', 
+                icon: 'Asset-Package_02072025.dee42cd0a6eaacc3da1ad9519579357fb546f803/Architecture-Service-Icons_02072025/Arch_Application-Integration/48/Arch_Amazon-Simple-Notification-Service_48.png',
+                values: [7, 6, 8, 7] 
+            },
+            { 
+                name: 'Amazon API Gateway', 
+                icon: 'Asset-Package_02072025.dee42cd0a6eaacc3da1ad9519579357fb546f803/Architecture-Service-Icons_02072025/Arch_Networking-Content-Delivery/48/Arch_Amazon-API-Gateway_48.png',
+                values: [9, 7, 5, 8] 
+            },
+            { 
+                name: 'Amazon Kinesis', 
+                icon: 'Asset-Package_02072025.dee42cd0a6eaacc3da1ad9519579357fb546f803/Architecture-Service-Icons_02072025/Arch_Analytics/48/Arch_Amazon-Kinesis_48.png',
+                values: [8, 8, 7, 6] 
+            },
+            { 
+                name: 'Amazon Redshift', 
+                icon: 'Asset-Package_02072025.dee42cd0a6eaacc3da1ad9519579357fb546f803/Architecture-Service-Icons_02072025/Arch_Analytics/48/Arch_Amazon-Redshift_48.png',
+                values: [6, 7, 9, 7] 
+            },
+            { 
+                name: 'AWS Step Functions', 
+                icon: 'Asset-Package_02072025.dee42cd0a6eaacc3da1ad9519579357fb546f803/Architecture-Service-Icons_02072025/Arch_Application-Integration/48/Arch_AWS-Step-Functions_48.png',
+                values: [7, 8, 8, 5] 
+            },
+            { 
+                name: 'Amazon ECS', 
+                icon: 'Asset-Package_02072025.dee42cd0a6eaacc3da1ad9519579357fb546f803/Architecture-Service-Icons_02072025/Arch_Containers/48/Arch_Amazon-Elastic-Container-Service_48.png',
+                values: [8, 6, 6, 9] 
+            },
+            { 
+                name: 'Amazon EKS', 
+                icon: 'Asset-Package_02072025.dee42cd0a6eaacc3da1ad9519579357fb546f803/Architecture-Service-Icons_02072025/Arch_Containers/48/Arch_Amazon-Elastic-Kubernetes-Service_48.png',
+                values: [9, 8, 7, 7] 
+            },
+            { 
+                name: 'AWS Fargate', 
+                icon: 'Asset-Package_02072025.dee42cd0a6eaacc3da1ad9519579357fb546f803/Architecture-Service-Icons_02072025/Arch_Containers/48/Arch_AWS-Fargate_48.png',
+                values: [7, 7, 8, 8] 
             }
         ];
         
@@ -75,8 +126,8 @@ class AWSBattleGame {
     
     shuffleCards() {
         const shuffled = [...this.awsServices].sort(() => Math.random() - 0.5);
-        this.playerCards = shuffled.slice(0, 5);
-        this.opponentCards = shuffled.slice(5, 10);
+        this.playerCards = shuffled.slice(0, 10);
+        this.opponentCards = shuffled.slice(10, 20);
         this.playerHand = [...this.playerCards];
     }
     
