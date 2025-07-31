@@ -126,8 +126,10 @@ class AWSBattleGame {
     
     shuffleCards() {
         const shuffled = [...this.awsServices].sort(() => Math.random() - 0.5);
-        this.playerCards = shuffled.slice(0, 10);
-        this.opponentCards = shuffled.slice(10, 20);
+        // 20種類のカードからランダムに5枚をプレイヤーの手札として選択
+        this.playerCards = shuffled.slice(0, 5);
+        // 残りのカードから5枚を相手の手札として選択
+        this.opponentCards = shuffled.slice(5, 10);
         this.playerHand = [...this.playerCards];
     }
     
